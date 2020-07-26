@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:Chat_Messenger__Flutter_App/screens/auth_screen.dart';
 import 'package:Chat_Messenger__Flutter_App/screens/chat_screen.dart';
 import 'package:Chat_Messenger__Flutter_App/screens/chat_detail_screen.dart';
 
@@ -39,8 +40,9 @@ class MyApp extends StatelessWidget {
               ),
         ),
       ),
-      home: ChatScreen(),
+      home: AuthScreen(),
       routes: {
+        ChatScreen.route: (ctx) => ChatScreen(),
         ChatDetailScreen.route: (ctx) => ChatDetailScreen(),
       },
     );

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:Chat_Messenger__Flutter_App/widgets/app_bar_header.dart';
 import 'package:Chat_Messenger__Flutter_App/widgets/chat_card.dart';
-import 'package:Chat_Messenger__Flutter_App/widgets/chat_input.dart';
+import 'package:Chat_Messenger__Flutter_App/widgets/input.dart';
 
 class ChatDetailScreen extends StatelessWidget {
   static String route = '/chat-detail';
@@ -38,7 +38,7 @@ class ChatDetailScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              ChatInput(),
+              Input(),
             ],
           ),
         ],

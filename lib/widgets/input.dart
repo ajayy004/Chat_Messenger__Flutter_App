@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ChatInput extends StatelessWidget {
+class Input extends StatelessWidget {
+  final String inputPlaceholder;
+  final bool confirmBtn;
+  final TextInputType inputType;
+  final bool obscureText;
+
+  Input({
+    this.inputPlaceholder = 'Type your message...',
+    this.confirmBtn = true,
+    this.inputType = TextInputType.text,
+    this.obscureText = false,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,19 +33,22 @@ class ChatInput extends StatelessWidget {
           Expanded(
             child: TextField(
               decoration: InputDecoration(
-                labelText: 'Type your message...',
+                labelText: inputPlaceholder,
                 border: InputBorder.none,
               ),
+              keyboardType: inputType,
+              obscureText: obscureText,
             ),
           ),
-          FlatButton(
-            onPressed: () {
-              //Implement send functionality.
-            },
-            child: Text(
-              'Send',
+          if (confirmBtn)
+            FlatButton(
+              onPressed: () {
+                //Implement send functionality.
+              },
+              child: Text(
+                'Send',
+              ),
             ),
-          ),
         ],
       ),
     );

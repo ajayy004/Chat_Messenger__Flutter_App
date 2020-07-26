@@ -5,6 +5,7 @@ import 'package:Chat_Messenger__Flutter_App/widgets/chat_list_container.dart';
 import 'package:Chat_Messenger__Flutter_App/widgets/user_chat_card.dart';
 
 class ChatScreen extends StatelessWidget {
+  static String route = '/chats';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
